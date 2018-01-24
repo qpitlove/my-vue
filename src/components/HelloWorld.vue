@@ -1,7 +1,9 @@
 <template>
     <div class="hello">
-        <h1> {{msg}}</h1>
+        <h1>{{msg}}</h1>
         <h2>Essential Links</h2>
+        <qpitlove-vue></qpitlove-vue>
+        <mong-vue :msg="msg"></mong-vue>
         <ul>
             <li><a href="https://vuejs.org" target="_blank">Core Docs </a></li>
             <li><a href="https://forum.vuejs.org" target="_blank">Forum </a></li>
@@ -20,8 +22,15 @@
     </div>
 </template>
 <script>
+    import QpitloveVue from '@/components/QpitloveVue'
+    import MongVue from '@/components/MongVue'
+
     export default {
         name: 'HelloWorld',
+        components: {
+            QpitloveVue,
+            MongVue
+        },
         data() {
             return {
                 msg: 'Welcome to Your Vue.js App'
